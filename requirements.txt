@@ -12,3 +12,4 @@ Flask
 plotly
 TextBlob
 yfinance
+scipy

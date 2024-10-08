@@ -18,7 +18,6 @@ import joblib
 import sklearn
 import os
 from scipy import stats
-from docx import Document
 from sklearn.model_selection import cross_val_score
 from sklearn.preprocessing import StandardScaler,MinMaxScaler
 
