@@ -13,3 +13,4 @@ plotly
 TextBlob
 yfinance
 scipy
+keras
