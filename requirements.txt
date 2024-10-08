@@ -14,3 +14,4 @@ TextBlob
 yfinance
 scipy
 keras
+tensorflow==2.13.1
