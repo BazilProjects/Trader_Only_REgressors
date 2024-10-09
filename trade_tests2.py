@@ -28,11 +28,11 @@ accountId = os.getenv('ACCOUNT_ID') or '52273464-c640-4cf1-a638-ec1da0a508a9'
 
 symbol_list = [
     'BTCUSDm',
-    'XAUUSDm',
+    #'XAUUSDm',
     'XAGUSDm',
-    'EURUSDm',
-    'GBPAUDm',
-    'GBPUSDm'
+    #'EURUSDm',
+    #'GBPAUDm',
+    #'GBPUSDm'
 
 ]
 data = {}
