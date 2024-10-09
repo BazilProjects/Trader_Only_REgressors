@@ -225,13 +225,13 @@ async def main2(timeframe,pages):
                     previous_close= df['close'].iloc[-1]
                     print(f'Previous close : {previous_close}')
                     symbol_list_lag= [
-                        {'BTCUSDm': 100},
+                        {'BTCUSDm': 50},
                         {'GBPUSDm': 0.00048},
                         {'EURUSDm': 0.00044},
                         {'AUDUSDm': 0.00048},
                         {'XAUUSDm':1},
                         {'GBPAUDm':0.00181},
-                        {'XAGUSDm':0.050},
+                        {'XAGUSDm':0.030},
                     ]
 
                     for item in symbol_list_lag:
@@ -241,7 +241,7 @@ async def main2(timeframe,pages):
                             lag_size=0.0004
 
                     
-                    if next_close>previous_close and next_close<next_high and next_close>next_low and (next_close-previous_close)>lag_size:
+                    if next_close>previous_close and next_close>next_low and (next_close-previous_close)>lag_size:
                         stop_loss=None#next_low-(lag_size*4)
                         #take_profit=trademax-(lag_size/2)
                         try:
@@ -258,7 +258,7 @@ async def main2(timeframe,pages):
                         except Exception as err:
                             print('Trade failed with error:')
                             print(api.format_error(err))
-                    if next_close<previous_close and next_close<next_high and next_close>next_low and (previous_close-next_close)>lag_size:
+                    if next_close<previous_close and next_close>next_low and (previous_close-next_close)>lag_size:
                         stop_loss=None#(next_high+lag_size*4)
                         #take_profit=trademax+(lag_size/2)
                         try:
